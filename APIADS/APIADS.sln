@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIADS", "APIADS.csproj", "{E67E8A6F-2DCA-4D5E-9EE2-92A5A24C1586}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E67E8A6F-2DCA-4D5E-9EE2-92A5A24C1586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E67E8A6F-2DCA-4D5E-9EE2-92A5A24C1586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E67E8A6F-2DCA-4D5E-9EE2-92A5A24C1586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E67E8A6F-2DCA-4D5E-9EE2-92A5A24C1586}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56488A86-462B-45F4-95D6-16DE44C9AA4F}
+	EndGlobalSection
+EndGlobal
