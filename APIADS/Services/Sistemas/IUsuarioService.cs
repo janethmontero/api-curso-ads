@@ -10,5 +10,7 @@ namespace APIADS.Services.Sistemas
         Task<List<Usuario>> GetUsuarios(int CveEmpresa);
         Task<Usuario> GetUsuario(int CveEmpresa, int cveUsuario);
         Task<ResponseModel> SaveUsuario(int CveEmpresa, Usuario usuario);
+        Task<ResponseModel> UpdateUsuario(int CveUsuario, Usuario usuario);
+        Task<ResponseModel> DeleteUsuario(int CveUsuario);
     }
 }

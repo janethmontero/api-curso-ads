@@ -61,5 +61,52 @@ namespace APIADS.Data.Sistemas
                 }
             }
         }
+
+        public async Task<int> UpdatetUsuario(int CveUsuario, Usuario usuario)
+        {
+            using (SqlConnection sql = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("[Sis_UsuarioUpdate]", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@CveUsuario", CveUsuario));
+                    cmd.Parameters.Add(new SqlParameter("@NombreUsuario", usuario.NombreUsuario));
+                    cmd.Parameters.Add(new SqlParameter("@Email", usuario.Email));
+                    cmd.Parameters.Add(new SqlParameter("@Estatus", usuario.Estatus));
+
+                    await sql.OpenAsync();
+
+                    int id = 0;
+                    object identity = await cmd.ExecuteScalarAsync();
+                    if (identity != null)
+                    {
+                        int.TryParse(identity.ToString(), out id);
+                    }
+
+                    return id;
+                }
+            }
+        }
+
+        public async Task<int> DeleteUsuario(int CveUsuario)
+        {
+            using (SqlConnection sql = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("[Sis_UsuarioDelete]", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@CveUsuario", CveUsuario));
+                    await sql.OpenAsync();
+                    int id = 0;
+                    object identity = await cmd.ExecuteScalarAsync();
+                    if (identity != null)
+                    {
+                        int.TryParse(identity.ToString(), out id);
+                    }
+
+                    return id;
+                }
+            }
+        }
     }
 }
